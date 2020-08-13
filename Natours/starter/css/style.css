@@ -60,8 +60,7 @@ body {
     font-weight: 700;
     letter-spacing: 1.75rem; }
 
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 15px 40px;
@@ -75,8 +74,10 @@ body {
 
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
 
-.btn-white {
+.btn--white {
   background-color: #FFF;
   color: #000; }
+  .btn--white::after {
+    background-color: #FFF; }
