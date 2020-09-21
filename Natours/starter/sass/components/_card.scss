@@ -23,7 +23,7 @@
         }
 
         &--back {
-            
+
             transform: rotateY(180deg);
 
             &-1 {
@@ -103,21 +103,21 @@
 
         &--1 {
             background-image: linear-gradient(
-                to right bottom, 
+                to right bottom,
                 rgba($color-secondary-light, .85),
                 rgba($color-secondary-dark, .85));
         }
 
         &--2 {
             background-image: linear-gradient(
-                to right bottom, 
+                to right bottom,
                 rgba($color-primary-light, .85),
                 rgba($color-primary-dark, .85));
         }
 
         &--3 {
             background-image: linear-gradient(
-                to right bottom, 
+                to right bottom,
                 rgba($color-tertiary-light, .85),
                 rgba($color-tertiary-dark, .85));
         }
@@ -168,5 +168,54 @@
     &__price-value {
         font-size: 6rem;
         font-weight: 100;
+    }
+
+
+//TAB PORT
+
+    @include respond(tab-port) {
+      height: auto;
+      border-radius: 3px;
+      background-color: $color-white;
+      box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+
+      &__side {
+          height: auto;
+          position: relative;
+          box-shadow: none;
+
+          &--back {
+              transform: rotateY(0);
+              clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+          }
+      }
+
+
+      &:hover &__side--front {
+          transform: rotateY(0);
+      }
+
+      &_-details {
+        padding: 0 1rem;
+      }
+
+       //FRONT_SIDE STYLE
+      &__cta {
+          position: relative;
+          top: 0%;
+          left: 0%;
+          transform: translate(0);
+          width: 100%;
+          padding: 7rem 4rem 4rem 4rem;
+      }
+
+      &__price-box {
+          margin-bottom: 3rem;
+      }
+
+      &__price-value {
+          font-size: 6rem;
+      }
     }
 }
